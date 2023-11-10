@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: "docs"
+
+website:
+  title: "cgaside"
+  navbar:
+    left:
+      - href: index.qmd
+        text: "홈"
+      - text: "기술문서"
+        menu: 
+          - href: overview.qmd
+            text: "개발개요"
+          - text: "-----------"
+          - href: data.qmd
+            text: "데이터"
+            
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/aivocado/cgaside
+      - icon: twitter
+        href: https://twitter.com
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+
+
+

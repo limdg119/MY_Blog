@@ -1,0 +1,15 @@
+---
+title: "데이터"
+subtitle: ""
+editor_options: 
+  chunk_output_type: console
+knitr:
+  opts_chunk: 
+    message: false
+    warning: false
+    collapse: true
+    comment: "#>" 
+    R.options:
+      knitr.graphics.auto_pdf: true
+---
+
