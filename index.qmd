@@ -1,5 +1,5 @@
 ---
-title: "cgaside"
+title: "MyBlog"
 listing:
   contents: posts
   sort: "date desc"
