@@ -15,20 +15,10 @@ about:
       href: https://limdg119.github.io/
 
 ---
-| <img src="profile.jpg" width="200" height="200"> | <img src="profile.jpg" width="200" height="200">  | <img src="profile.jpg" width="200" height="200">  |
-|:-----:|:------:|:------:|
-| 노희찬  | 고유정 | 임동건 |
 
-
-: Demonstration of pipe table syntax
-\begin{table}
-\begin{center}
-\begin{tabular}{ccc}
-\includegraphics[width=0.5\textwidth ]{profile.jpg}&
-\includegraphics[width=0.5\textwidth ]{profile.jpg}&
-\includegraphics[width=0.5\textwidth ]{profile.jpg} \\
-2a & 2b & 2c
-\end{tabular}
-\end{center}
-\end{table}
+노희찬, 고유정, 임동건 으로 구성된 팀입니다.
+| <img src="hechan.jpg" width="200" height="200"> | <img src="photo.jpeg" width="200" height="200">  | <img src="donggeon_image.jpeg" width="200" height="200">  |
+|:---------:|:---------:|:---------:|
+| 노희찬 | 고유정 | 임동건 |
+| 데이터 사이언티스트 | 데이터 사이언티스트 | 데이터 사이언티스트 |
 임동건 블로그2 입니다.

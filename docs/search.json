@@ -11,7 +11,7 @@
     "href": "about.html",
     "title": "MyBlog",
     "section": "",
-    "text": "노희찬\n고유정\n임동건\n\n\n\n: Demonstration of pipe table syntax\n임동건 블로그2 입니다."
+    "text": "노희찬, 고유정, 임동건 으로 구성된 팀입니다. |  |  |  | |:———:|:———:|:———:| | 노희찬 | 고유정 | 임동건 | | 데이터 사이언티스트 | 데이터 사이언티스트 | 데이터 사이언티스트 | 임동건 블로그2 입니다."
   },
   {
     "objectID": "index.html",
