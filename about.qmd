@@ -1,5 +1,5 @@
 ---
-title: "MyBlog"
+title: "CGInside alpha"
 image: profile.jpg
 about:
   template: jolla
@@ -16,9 +16,14 @@ about:
 
 ---
 
-노희찬, 고유정, 임동건 으로 구성된 팀입니다.
-| <img src="hechan.jpeg" width="200" height="200"> | <img src="photo.jpeg" width="200" height="200">  | <img src="donggeon_image.jpeg" width="200" height="200">  |
-|:---------:|:---------:|:---------:|
-| 노희찬 | 고유정 | 임동건 |
-| 데이터 사이언티스트 | 데이터 사이언티스트 | 데이터 사이언티스트 |
-임동건 블로그2 입니다.
+노희찬, 고유정, 임동건 으로 구성된 팀입니다.\
+
+## Team Members ##
+
+</br>
+
+| <img src="hechan.jpeg" width="200" height="200"> | <img src="photo.jpeg" width="200" height="200">  | <img src="donggeon_image.jpeg" width="200" height="200"> |
+|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|
+| 노희찬           | 고유정           | 임동건          |
+| 데이터 사이언티스트 | 데이터 사이언티스트  | 데이터 사이언티스트 |
+
