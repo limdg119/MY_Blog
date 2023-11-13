@@ -1,6 +1,6 @@
 ---
-title: "CGInside alpha"
-image: profile.jpg
+title: "My Blog"
+image: donggeon.png
 about:
   template: jolla
   links:
@@ -16,14 +16,4 @@ about:
 
 ---
 
-노희찬, 고유정, 임동건 으로 구성된 팀입니다.\
-
-## Team Members ##
-
-</br>
-
-| <img src="hechan.jpeg" width="200" height="200"> | <img src="yujeong.jpeg" width="200" height="200">  | <img src="donggeon.png" width="200" height="200"> |
-|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|
-| **노희찬**         | **고유정**          | **임동건**        |
-| 클라우드 아키텍트 | 데이터 사이언티스트 | 데이터 사이언티스트 |
-| 풀스택 개발자 | 데이터 분석 컨설턴트 | 솔루션 개발자 |
+임동건 블로그입니다.
