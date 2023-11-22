@@ -19,7 +19,7 @@ pwd = os.getcwd()
 print(pwd)
 os.chdir('/Users/limdonggeon/Desktop/SNU_FINTECH/Python_Programming_Visualization/practice/data')
 pwd2 = os.getcwd()
-data = pd.read_csv(pwd2 + './airlines.csv')
+data = pd.read_csv(pwd2 + '/airlines.csv')
 data.head()
 ```
   
