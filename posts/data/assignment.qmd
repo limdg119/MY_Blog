@@ -1,7 +1,7 @@
 ---
 title: Data Load and Python
 author: DG Lim
-date: '2023-11-09'
+date: '2023-11-23'
 categories: [news, analysis]
 image: donggeon_image.jpeg
 jupyter: python3
@@ -18,7 +18,7 @@ import os
 ```
 
 ```{python}
-path = '/Users/limdonggeon/Desktop/workspace/limdg119.github.io/posts/data'
+path = '/Users/limdonggeon/Desktop'
 ```
 
 # 1. 지하철 유무임 승차비율 데이터 분석
@@ -140,7 +140,7 @@ for i in range(10):
 ```{python}
 #| scrolled: true
 data2 = []
-with open('metro_time.csv', 'r', encoding='cp949') as f:
+with open(path+'/metro_time.csv', 'r', encoding='cp949') as f:
     source2 = csv.reader(f, delimiter=',')
     header2_1 = next(source2)
     header2_2 = next(source2)

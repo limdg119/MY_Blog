@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="DG Lim">
-<meta name="dcterms.date" content="2023-11-09">
+<meta name="dcterms.date" content="2023-11-23">
 
 <title>My Blog - Data Load and Python</title>
 <style>
@@ -185,7 +185,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 9, 2023</p>
+        <p class="date">November 23, 2023</p>
       </div>
     </div>
     
@@ -212,7 +212,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> <span class="st">'/Users/limdonggeon/Desktop/workspace/limdg119.github.io/posts/data'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> <span class="st">'/Users/limdonggeon/Desktop'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="지하철-유무임-승차비율-데이터-분석" class="level1">
 <h1>1. 지하철 유무임 승차비율 데이터 분석</h1>
@@ -357,7 +357,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>2. 지하철 시간대별 승하차 데이터 분석</h1>
 <div class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>data2 <span class="op">=</span> []</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'metro_time.csv'</span>, <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'cp949'</span>) <span class="im">as</span> f:</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(path<span class="op">+</span><span class="st">'/metro_time.csv'</span>, <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'cp949'</span>) <span class="im">as</span> f:</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    source2 <span class="op">=</span> csv.reader(f, delimiter<span class="op">=</span><span class="st">','</span>)</span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    header2_1 <span class="op">=</span> <span class="bu">next</span>(source2)</span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    header2_2 <span class="op">=</span> <span class="bu">next</span>(source2)</span>
@@ -526,8 +526,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>2-2 각 시간대별 모든 지하철역에서의 총 승차인원의 합과 총 하차인원의 합을 구하고, x축을 시간, y축을 인원으로 하는 그래프로 나타내시오.</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="18">
-<pre><code>&lt;matplotlib.legend.Legend at 0x148266f50&gt;</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="24">
+<pre><code>&lt;matplotlib.legend.Legend at 0x144302560&gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <p><img src="assignment_files/figure-html/cell-19-output-3.png" width="812" height="449"></p>

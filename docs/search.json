@@ -18,7 +18,7 @@
     "href": "index.html",
     "title": "MyBlog",
     "section": "",
-    "text": "프로젝트를 시작합니다!!!\n\n\n\n\n\n\n\n\n  \n\n\n\n\nOpenAI DevDay, Opening Keynote 임동건\n\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nNov 9, 2023\n\n\nDG Lim\n\n\n\n\n\n\n  \n\n\n\n\nData Load and Python\n\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nNov 9, 2023\n\n\nDG Lim\n\n\n\n\n\n\n  \n\n\n\n\nQuarto\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nNov 8, 2023\n\n\nDG Lim\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nNov 7, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nNov 4, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "프로젝트를 시작합니다!!!\n\n\n\n\n\n\n\n\n  \n\n\n\n\nData Load and Python\n\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nNov 23, 2023\n\n\nDG Lim\n\n\n\n\n\n\n  \n\n\n\n\nOpenAI DevDay, Opening Keynote 임동건\n\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nNov 9, 2023\n\n\nDG Lim\n\n\n\n\n\n\n  \n\n\n\n\nQuarto\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nNov 8, 2023\n\n\nDG Lim\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nNov 7, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nNov 4, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -95,7 +95,7 @@
     "href": "posts/data/assignment.html",
     "title": "Data Load and Python",
     "section": "",
-    "text": "데이터 로드와 파이썬 되는지 확인 # Data Load and Python\n# 라이브러리 파일 실행\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport csv\nimport os\npath = '/Users/limdonggeon/Desktop/workspace/limdg119.github.io/posts/data'"
+    "text": "데이터 로드와 파이썬 되는지 확인 # Data Load and Python\n# 라이브러리 파일 실행\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport csv\nimport os\npath = '/Users/limdonggeon/Desktop'"
   },
   {
     "objectID": "posts/data/assignment.html#총-승차인원유임승차무임승차이-가장-많은-역과-그-역의-승차인원을-출력하고-총-하차인원유임하차무임하차이-가장-많은-역과-그-역의-하차인원을-출력하세요.",
@@ -123,6 +123,6 @@
     "href": "posts/data/assignment.html#각-시간대별-모든-지하철역에서의-총-승차인원의-합과-총-하차인원의-합을-구하고-x축을-시간-y축을-인원으로-하는-그래프로-나타내시오.",
     "title": "Data Load and Python",
     "section": "2-2. 각 시간대별 모든 지하철역에서의 총 승차인원의 합과 총 하차인원의 합을 구하고, x축을 시간, y축을 인원으로 하는 그래프로 나타내시오.",
-    "text": "2-2. 각 시간대별 모든 지하철역에서의 총 승차인원의 합과 총 하차인원의 합을 구하고, x축을 시간, y축을 인원으로 하는 그래프로 나타내시오.\n\n#시간대 별 모든 지하철역에서의 총 승차인원의 합과 총 하차인원의 합\nsum_time_board = []\nsum_time_deboard = []\nfor i in range(24):\n    sum_time_board.append(sum(time_board_array[i,:]))\n    sum_time_deboard.append(sum(time_deboard_array[i,:]))\n\nsum_time_board_array = np.array(sum_time_board)\nsum_time_deboard_array = np.array(sum_time_deboard)\n\n\nprint('2-2 각 시간대별 모든 지하철역에서의 총 승차인원의 합과 총 하차인원의 합을 구하고, x축을 시간, y축을 인원으로 하는 그래프로 나타내시오.')\nt_index = [t for t in range(4,28)]\nfig, ax = plt.subplots(figsize=(10,5))\nplt.title(\"Board & Deboard\")\nax.set_xlabel(\"Time\")\nax.set_ylabel(\"Number of person\")\nplt.plot(t_index,sum_time_board_array, label='board', color = 'blue', linewidth= '3')\nplt.plot(t_index,sum_time_deboard_array, label='deboard', color = 'red', linewidth= '3')\nplt.legend()\n\n2-2 각 시간대별 모든 지하철역에서의 총 승차인원의 합과 총 하차인원의 합을 구하고, x축을 시간, y축을 인원으로 하는 그래프로 나타내시오.\n\n\n&lt;matplotlib.legend.Legend at 0x148266f50&gt;"
+    "text": "2-2. 각 시간대별 모든 지하철역에서의 총 승차인원의 합과 총 하차인원의 합을 구하고, x축을 시간, y축을 인원으로 하는 그래프로 나타내시오.\n\n#시간대 별 모든 지하철역에서의 총 승차인원의 합과 총 하차인원의 합\nsum_time_board = []\nsum_time_deboard = []\nfor i in range(24):\n    sum_time_board.append(sum(time_board_array[i,:]))\n    sum_time_deboard.append(sum(time_deboard_array[i,:]))\n\nsum_time_board_array = np.array(sum_time_board)\nsum_time_deboard_array = np.array(sum_time_deboard)\n\n\nprint('2-2 각 시간대별 모든 지하철역에서의 총 승차인원의 합과 총 하차인원의 합을 구하고, x축을 시간, y축을 인원으로 하는 그래프로 나타내시오.')\nt_index = [t for t in range(4,28)]\nfig, ax = plt.subplots(figsize=(10,5))\nplt.title(\"Board & Deboard\")\nax.set_xlabel(\"Time\")\nax.set_ylabel(\"Number of person\")\nplt.plot(t_index,sum_time_board_array, label='board', color = 'blue', linewidth= '3')\nplt.plot(t_index,sum_time_deboard_array, label='deboard', color = 'red', linewidth= '3')\nplt.legend()\n\n2-2 각 시간대별 모든 지하철역에서의 총 승차인원의 합과 총 하차인원의 합을 구하고, x축을 시간, y축을 인원으로 하는 그래프로 나타내시오.\n\n\n&lt;matplotlib.legend.Legend at 0x144302560&gt;"
   }
 ]
