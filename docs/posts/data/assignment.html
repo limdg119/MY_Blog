@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="DG Lim">
+<meta name="dcterms.date" content="2023-11-09">
 
-<title>My Blog - 문제 풀기에 앞서 사용할 라이브러리 파일들 실행</title>
+<title>My Blog - Data Load and Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -162,14 +164,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">문제 풀기에 앞서 사용할 라이브러리 파일들 실행</h1>
-                      </div>
+      <h1 class="title">Data Load and Python</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">news</div>
+                <div class="quarto-category">analysis</div>
+              </div>
+                  </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>DG Lim </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 9, 2023</p>
+      </div>
+    </div>
     
       
     </div>
@@ -185,19 +203,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div class="cell" data-execution_count="8">
+<p>데이터 로드와 파이썬 되는지 확인 # Data Load and Python</p>
+<div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 라이브러리 파일 실행</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> csv</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell">
+<div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> <span class="st">'/Users/limdonggeon/Desktop/workspace/limdg119.github.io/posts/data'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="지하철-유무임-승차비율-데이터-분석" class="level1">
 <h1>1. 지하철 유무임 승차비율 데이터 분석</h1>
-<div class="cell" data-execution_count="9">
+<div class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 데이터 불러오기</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>data1 <span class="op">=</span> []</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(path<span class="op">+</span><span class="st">'/metro_fare.csv'</span>, <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'cp949'</span>) <span class="im">as</span> f:</span>
@@ -218,7 +237,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 ['Jun-22', '1호선', '150', '서울역', '1,150,754', '1,123,193', '194,717', '187,155', '2022-07-03 9:48', '2,655,819']</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="10">
+<div class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 불러온 데이터 결측치 여부 확인</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>cnt <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> row <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(data_array1)):</span>
@@ -233,7 +252,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>결측치가 존재하지 않습니다.</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="11">
+<div class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 같은 역에대한 데이터가 존재하는지 확인</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 이름이 같지만 호선이 다른 경우 다른 역으로 표현함 (1호선 시청역과 2호선 시청역은 다름)</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 호선 + 역 이름으로 역 리스트 생성</span></span>
@@ -250,7 +269,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>호선과 역 이름이 동시에 겹치는 역이 없습니다.</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="12">
+<div class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ndarray형태에서 ,때문에 인원들에 대한 요소값을 int 형태로 변경 불가</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># list를 만들어 ,를 지운 후 ndarray형태로 변경</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>stationary_board_list <span class="op">=</span> []</span>
@@ -283,7 +302,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="총-승차인원유임승차무임승차이-가장-많은-역과-그-역의-승차인원을-출력하고-총-하차인원유임하차무임하차이-가장-많은-역과-그-역의-하차인원을-출력하세요." class="level2">
 <h2 class="anchored" data-anchor-id="총-승차인원유임승차무임승차이-가장-많은-역과-그-역의-승차인원을-출력하고-총-하차인원유임하차무임하차이-가장-많은-역과-그-역의-하차인원을-출력하세요.">1-1. 총 승차인원(유임승차+무임승차)이 가장 많은 역과 그 역의 승차인원을 출력하고 총 하차인원(유임하차+무임하차)이 가장 많은 역과 그 역의 하차인원을 출력하세요.</h2>
-<div class="cell" data-execution_count="13">
+<div class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'1-1. 총 승차인원(유임승차+무임승차)이 가장 많은 역과 그 역의 승차인원을 출력하고 총 하차인원(유임하차+무임하차)이 가장 많은 역과 그 역의 하차인원을 출력하세요.'</span>)</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 역별 승차인원 ndarray 만들기</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>total_board <span class="op">=</span> stationary_board <span class="op">+</span> free_board</span>
@@ -307,7 +326,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="유임승차자의-비율유임승차총-승차인원이-가장-높은-상위-10개-역과-각각의-유임승차자-비율을-구하세요." class="level2">
 <h2 class="anchored" data-anchor-id="유임승차자의-비율유임승차총-승차인원이-가장-높은-상위-10개-역과-각각의-유임승차자-비율을-구하세요.">1-2. 유임승차자의 비율(유임승차/총 승차인원)이 가장 높은 상위 10개 역과 각각의 유임승차자 비율을 구하세요.</h2>
-<div class="cell" data-execution_count="14">
+<div class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'1-2 유임승차자의 비율(유임승차/총 승차인원)이 가장 높은 상위 10개 역과 각각의 유임승차자 비율을 구하세요.'</span>)</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 역별 유임승차자 비율 ndarray 만들기</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>stationary_rate <span class="op">=</span> stationary_board<span class="op">/</span>total_board</span>
@@ -336,7 +355,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="지하철-시간대별-승하차-데이터-분석" class="level1">
 <h1>2. 지하철 시간대별 승하차 데이터 분석</h1>
-<div class="cell" data-scrolled="true" data-execution_count="15">
+<div class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>data2 <span class="op">=</span> []</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'metro_time.csv'</span>, <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'cp949'</span>) <span class="im">as</span> f:</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    source2 <span class="op">=</span> csv.reader(f, delimiter<span class="op">=</span><span class="st">','</span>)</span>
@@ -358,7 +377,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 ['2022-06', '1호선', '0150', '서울역', '646', '24', '8,433', '7,694', '12,608', '46,963', '39,233', '100,397', '65,106', '201,687', '54,833', '136,594', '54,970', '72,279', '65,919', '63,975', '73,911', '71,095', '75,158', '70,182', '62,452', '63,752', '83,128', '66,858', '94,518', '68,962', '144,662', '80,449', '194,098', '85,268', '97,875', '56,132', '69,808', '39,704', '76,345', '35,471', '51,224', '26,045', '20,385', '15,480', '158', '1,332', '1', '4', '0', '1', '0', '0', '2022-07-03 09:48:05']</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="16">
+<div class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 불러온 데이터 결측치 여부 확인</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>cnt <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> row <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(data_array2)):</span>
@@ -373,7 +392,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>결측치가 존재하지 않습니다.</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="17">
+<div class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 같은 역에대한 데이터가 존재하는지 확인</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 이름이 같지만 호선이 다른 경우 다른 역으로 표현함 (1호선 시청역과 2호선 시청역은 다름)</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 호선 + 역 이름으로 역 리스트 생성</span></span>
@@ -390,7 +409,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>호선과 역 이름이 동시에 겹치는 역이 없습니다.</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="18">
+<div class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ndarray형태에서 ,때문에 인원들에 대한 요소값을 int 형태로 변경 불가</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co"># list를 만들어 ,를 지운 후 ndarray형태로 변경</span></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>time_board_mat <span class="op">=</span> []</span>
@@ -409,7 +428,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="출근-시간대7시9시-승차인원과-하차인원-각각에-대해-정렬된-barplot을-그리고-인원이-가장-많은-역과-인원을-각각-찾으세요." class="level2">
 <h2 class="anchored" data-anchor-id="출근-시간대7시9시-승차인원과-하차인원-각각에-대해-정렬된-barplot을-그리고-인원이-가장-많은-역과-인원을-각각-찾으세요.">2-1. 출근 시간대(7시~9시) 승차인원과 하차인원 각각에 대해 정렬된 barplot을 그리고, 인원이 가장 많은 역과 인원을 각각 찾으세요.</h2>
-<div class="cell" data-execution_count="19">
+<div class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 출근 시간대 승차인원</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>time_board_7to9 <span class="op">=</span> time_board_array[<span class="dv">3</span>,:] <span class="op">+</span> time_board_array[<span class="dv">4</span>,:]</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 출근 시간대 승차인원이 적은 순으로 인덱스와 값 정렬</span></span>
@@ -422,7 +441,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>time_deboard_7to9_idx <span class="op">=</span> np.argsort(time_deboard_7to9)</span>
 <span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>time_deboard_7to9_value <span class="op">=</span> time_deboard_7to9[time_deboard_7to9_idx]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="20">
+<div class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'2-1 출근 시간대(7시~9시) 승차인원과 하차인원 각각에 대해 정렬된 barplot을 그리고, 인원이 가장 많은 역과 인원을 각각 찾으세요.'</span>)</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'출근 시간대에 승차인원이 가장 많은 역 : </span><span class="sc">{</span>station2[time_board_7to9_idx[<span class="op">-</span><span class="dv">1</span>]]<span class="sc">}</span><span class="ss">역 </span><span class="sc">{</span>time_board_7to9_value[<span class="op">-</span><span class="dv">1</span>]<span class="sc">}</span><span class="ss">명 탑승'</span>)</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>x_index <span class="op">=</span> np.arange(<span class="bu">len</span>(time_board_7to9_idx))</span>
@@ -437,10 +456,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 출근 시간대에 승차인원이 가장 많은 역 : 2호선 신림역 469127명 탑승</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="assignment_files/figure-html/cell-15-output-2.png" class="img-fluid"></p>
+<p><img src="assignment_files/figure-html/cell-15-output-2.png" width="842" height="597"></p>
 </div>
 </div>
-<div class="cell" data-execution_count="21">
+<div class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'출근 시간대에 하차인원이 가장 많은 역 : </span><span class="sc">{</span>station2[time_deboard_7to9_idx[<span class="op">-</span><span class="dv">1</span>]]<span class="sc">}</span><span class="ss">역 </span><span class="sc">{</span>time_deboard_7to9_value[<span class="op">-</span><span class="dv">1</span>]<span class="sc">}</span><span class="ss">명 하차'</span>)</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>x_index <span class="op">=</span> np.arange(<span class="bu">len</span>(time_deboard_7to9_idx))</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">7</span>))</span>
@@ -453,10 +472,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>출근 시간대에 하차인원이 가장 많은 역 : 7호선 가산디지털단지역 486420명 하차</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="assignment_files/figure-html/cell-16-output-2.png" class="img-fluid"></p>
+<p><img src="assignment_files/figure-html/cell-16-output-2.png" width="842" height="597"></p>
 </div>
 </div>
-<div class="cell" data-execution_count="22">
+<div class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'출근 시간대에 승차인원이 가장 많은 역 : </span><span class="sc">{</span>station2[time_board_7to9_idx[<span class="op">-</span><span class="dv">1</span>]]<span class="sc">}</span><span class="ss">역 </span><span class="sc">{</span>time_board_7to9_value[<span class="op">-</span><span class="dv">1</span>]<span class="sc">}</span><span class="ss">명 탑승'</span>)</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'출근 시간대에 하차인원이 가장 많은 역 : </span><span class="sc">{</span>station2[time_deboard_7to9_idx[<span class="op">-</span><span class="dv">1</span>]]<span class="sc">}</span><span class="ss">역 </span><span class="sc">{</span>time_deboard_7to9_value[<span class="op">-</span><span class="dv">1</span>]<span class="sc">}</span><span class="ss">명 하차'</span>)</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>x_index <span class="op">=</span> np.arange(<span class="bu">len</span>(time_deboard_7to9_idx))</span>
@@ -477,13 +496,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 출근 시간대에 하차인원이 가장 많은 역 : 7호선 가산디지털단지역 486420명 하차</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="assignment_files/figure-html/cell-17-output-2.png" class="img-fluid"></p>
+<p><img src="assignment_files/figure-html/cell-17-output-2.png" width="1214" height="523"></p>
 </div>
 </div>
 </section>
 <section id="각-시간대별-모든-지하철역에서의-총-승차인원의-합과-총-하차인원의-합을-구하고-x축을-시간-y축을-인원으로-하는-그래프로-나타내시오." class="level2">
 <h2 class="anchored" data-anchor-id="각-시간대별-모든-지하철역에서의-총-승차인원의-합과-총-하차인원의-합을-구하고-x축을-시간-y축을-인원으로-하는-그래프로-나타내시오.">2-2. 각 시간대별 모든 지하철역에서의 총 승차인원의 합과 총 하차인원의 합을 구하고, x축을 시간, y축을 인원으로 하는 그래프로 나타내시오.</h2>
-<div class="cell" data-execution_count="16">
+<div class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">#시간대 별 모든 지하철역에서의 총 승차인원의 합과 총 하차인원의 합</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>sum_time_board <span class="op">=</span> []</span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>sum_time_deboard <span class="op">=</span> []</span>
@@ -494,7 +513,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>sum_time_board_array <span class="op">=</span> np.array(sum_time_board)</span>
 <span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>sum_time_deboard_array <span class="op">=</span> np.array(sum_time_deboard)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="17">
+<div class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'2-2 각 시간대별 모든 지하철역에서의 총 승차인원의 합과 총 하차인원의 합을 구하고, x축을 시간, y축을 인원으로 하는 그래프로 나타내시오.'</span>)</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>t_index <span class="op">=</span> [t <span class="cf">for</span> t <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>,<span class="dv">28</span>)]</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">5</span>))</span>
@@ -507,11 +526,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>2-2 각 시간대별 모든 지하철역에서의 총 승차인원의 합과 총 하차인원의 합을 구하고, x축을 시간, y축을 인원으로 하는 그래프로 나타내시오.</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="17">
-<pre><code>&lt;matplotlib.legend.Legend at 0x11b1d1ba0&gt;</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="18">
+<pre><code>&lt;matplotlib.legend.Legend at 0x148266f50&gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="assignment_files/figure-html/cell-19-output-3.png" class="img-fluid"></p>
+<p><img src="assignment_files/figure-html/cell-19-output-3.png" width="812" height="449"></p>
 </div>
 </div>
 
