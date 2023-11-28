@@ -8,5 +8,12 @@
       "/posts/post-with-code/index.html",
       "/posts/welcome/index.html"
     ]
+  },
+  {
+    "listing": "/overview.html",
+    "items": [
+      "/dev_posts/EDA/BaseTable2_EDA.html",
+      "/dev_posts/BaseTable/MakeBaseTable.html"
+    ]
   }
 ]

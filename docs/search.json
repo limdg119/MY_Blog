@@ -250,5 +250,12 @@
     "title": "Base Table을 활용한 EDA",
     "section": "4) 법령구분에 따른 사무판단",
     "text": "4) 법령구분에 따른 사무판단\n\n법령구분 종류: 3개\n\n법령구분이 1인 경우 : 365424개\n법령구분이 2인 경우 : 319805개\n법령구분이 3인 경우 : 176395개\n\n\n\ndef lawclass_judgment_graph(df):\n    groups = ['1', '2', '3']\n    values1 = [len(df.loc[(df['법령구분']==1) & (df['사무판단']==0) ]), len(df.loc[(df['법령구분']==2) & (df['사무판단']==0) ]), len(df.loc[(df['법령구분']==3) & (df['사무판단']==0) ])]\n    values2 = [len(df.loc[(df['법령구분']==1) & (df['사무판단']==1) ]), len(df.loc[(df['법령구분']==2) & (df['사무판단']==1) ]), len(df.loc[(df['법령구분']==3) & (df['사무판단']==1) ])]\n    fig, ax = plt.subplots(figsize=(3, 5))\n    colors = sns.color_palette('pastel')[3:5]\n\n    # stack bar 로 구성\n    ax.bar(groups, values1, color = colors[0])\n    ax.bar(groups, values2, bottom = values1, color = colors[1])\n    plt.title('법령구분에 따른 사무판단 여부 파악\\n\\n')\n    plt.xlabel('법령구분')\n    plt.ylabel('개수')\n    plt.legend(['사무가 아니다', '사무이다'], bbox_to_anchor=(1.7, 1))\n    plt.ylim([0,400000])\n    plt.yticks(np.arange(0, 500000, step=100000))\n    plt.show()\n\n\nlawclass_judgment_graph(data)\n\n\n\n\n\n# def law_work_count(i):\n#     a = len(df.loc[(df['법령구분']==i) & (df['사무판단']==0), ])\n#     b = len(df.loc[(df['법령구분']==i) & (df['사무판단']==1), ])\n#     c = len(df.loc[(df['법령구분']==i) & (df['사무판단']==2), ])\n\n#     print(f\"법령 구분 {i}일때 ========\")\n#     print(f\"사무x: {a}\")\n#     print(f\"사무O: {b}\")\n#     print(f\"애매: {c}\")\n    \n\n#     result = [a, b, c]\n#     return result\n\n\n# result = []\n# for i in range(1, 4):\n#     result.append(law_work_count(i))\n# result\n\n\n# # 법령 구분에 따른 사무판단 비율 계산\n# ratio_df = df.groupby(['법령구분', '사무판단']).size().unstack().T\n# ratio_df = ratio_df.div(ratio_df.sum(axis=1), axis=0)\n\n# # 비율을 시각화\n# ratio_df.T.plot(kind='bar', stacked=True)\n# plt.title('법령구분에 따른 사무판단 비율')\n# plt.xlabel('법령구분')\n# plt.ylabel('Administrative Decision')\n# plt.show()"
+  },
+  {
+    "objectID": "overview.html",
+    "href": "overview.html",
+    "title": "개발개요",
+    "section": "",
+    "text": "Base Table을 활용한 EDA\n\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\n\nNov 28, 2023\n\n\nDG Lim\n\n\n\n\n\n\n  \n\n\n\n\nBase Table 만들기\n\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\n\nNov 28, 2023\n\n\nDG Lim\n\n\n\n\n\n\nNo matching items"
   }
 ]
